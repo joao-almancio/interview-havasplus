@@ -20,8 +20,7 @@ class Postlist extends Component {
     <div className="post-list">
       {this.state.data.map(post => (
         <article className="post-item" key={post.id}>
-          <h1 className="post-title">{post.title}</h1>
-          <p className="post-text">{post.body}</p>
+          <strong className="post-title">{post.title}</strong>
         </article>
       ))}
     </div>
