@@ -2,7 +2,7 @@ import React from 'react';
 import Routes from './routes';
 
 
-import Header from './components/header/index';
+import Header from './components/header-comp/index';
 
 const App = () => {
   return (<div className="App">

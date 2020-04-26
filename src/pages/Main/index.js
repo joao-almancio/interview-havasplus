@@ -1,15 +1,38 @@
 import React, {Component} from 'react';
-import Postlist from '../../components/postlist/index'
+import {Link} from 'react-router-dom';
+import api from '../../services/api'
 
-class Main extends Component {
+class MainPage extends Component {
+  state = {
+    data: []
+  }
+
+  async componentDidMount() {
+    let res = await api.get();
+    this.setState({ data: res.data });
+  }
+
+  listComponent = () => {
+    return (
+      <div className="post-list">
+        {this.state.data.map(post => (
+          <Link to={`/post/${post.id}`} key={post.id}>
+            <article className="post-item">
+            <strong className="post-title">{post.title}</strong>
+            </article>
+          </Link>
+        ))}
+      </div>
+    );
+  }
+
   render() {
     return (
-      <main id="conteudo-principal"> 
-      <p>Texto do main</p>
-      <Postlist />
-      </main>
+      <div>
+      <this.listComponent />
+    </div>
     )
   }
 }
 
-export default Main;
+export default MainPage;

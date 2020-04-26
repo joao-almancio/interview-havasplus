@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Post = () => ( 
-  <div>
-        
-  </div>
-)
+class PostPage extends Component {
+  render() {
+    return (
+      <div>
+        Pagina dos Posts
+      </div>
+    )
+  }
+}
 
-export default Post;
+export default PostPage;
