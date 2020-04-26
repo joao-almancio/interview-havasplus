@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Postlist from '../../components/Postlist/index'
+import Postlist from '../../components/postlist/index'
 
 class Main extends Component {
   render() {

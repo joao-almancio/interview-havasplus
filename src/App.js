@@ -1,13 +1,13 @@
 import React from 'react';
-import Main from './pages/Main/index';
+import Routes from './routes';
 
 
-import Header from './components/Header/index';
+import Header from './components/header/index';
 
 const App = () => {
   return (<div className="App">
     <Header />
-    <Main />
+    <Routes />
     </div>);
 }
 
