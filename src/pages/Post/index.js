@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
 import { Link } from 'react-router-dom';
+import './styles.css';
 
 class PostPage extends Component {
   state = {
@@ -31,25 +32,18 @@ class PostPage extends Component {
     const { selectedPost } = this.state;
 
     return (
-      <div className="post-content">
-        <h1 className="post-title">{selectedPost.title}</h1>
-        <p className="post-body">{selectedPost.body}</p>
+      <div id="post-content">
+        <h1 id="post-title">{selectedPost.title}</h1>
+        <p id="post-body">{selectedPost.body}</p>
+        <Link to ='/' ><button id="voltar-btn"> Voltar </button> </Link>
       </div>
-    )
-  }
-
-  Voltar = () => {
-    return (
-      <Link to ='/' className="Voltar"> Voltar </Link>
     )
   }
 
   render() {
     return (
-      <div>
-        Pagina dos Posts
+      <div id="post-main-comp">
         <this.postContentComp />
-        <this.Voltar />
       </div>
     )
   }

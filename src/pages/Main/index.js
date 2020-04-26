@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import api from '../../services/api'
+import api from '../../services/api';
+import './styles.css';
 
 class MainPage extends Component {
   state = {
@@ -17,8 +18,9 @@ class MainPage extends Component {
       <div className="post-list">
         {this.state.data.map(post => (
           <Link to={`/post/${post.userId}/${post.id}`} key={post.id}>
-            <article className="posts-items">
-            <strong className="posts-titles">{post.title}</strong>
+            <article className="post-item">
+            <strong className="post-title">{post.title}</strong>
+        <p className="post-body">{post.body}</p>
             </article>
           </Link>
         ))}

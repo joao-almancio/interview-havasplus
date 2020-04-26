@@ -1,0 +1,53 @@
+a:hover {
+
+}
+
+a:visited {
+  color: #191919;
+}
+
+#post-main-comp {
+  width: 80%;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+#post-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 26px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+
+  text-transform: capitalize;
+}
+
+#post-body {
+  font-size: 16px;
+  font-family: sans-serif;
+  line-height: 1.8;
+}
+
+#voltar-btn {
+  height: 100%;
+  width: 100px;
+
+  margin-top: 20px;
+
+  border-radius: 5px;
+
+  background: #ffffff;
+  border: solid #1e3a5f 2px;
+  color: #1e3a5f;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 20px;
+
+  transition: 0.2s ease-in-out;
+}
+
+#voltar-btn:hover {
+  background: #1e3a5f;
+  border: solid #1e3a5f 2px;
+  color: #ffffff;
+}
