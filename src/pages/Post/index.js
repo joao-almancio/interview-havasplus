@@ -1,23 +1,33 @@
 import React, { Component } from 'react';
-import api from '../../services/api'
+import api from '../../services/api';
+import { Link } from 'react-router-dom';
 
 class PostPage extends Component {
   state = {
-    userPosts: [],
-    selectedPost: {}
+    posts: [],
+    selectedPost: {},
+    readMore: [],
+
+    cont: 0
   }
 
   async componentDidMount() {
     let params = this.props.match.params;
-    let res = await api.get(`?userId=${params.userId}`);
-
-    this.setState( { userPosts: res.data }); 
-    let selectedPost = this.state.userPosts.find(item => item.id == params.id);
-
+    let res = await api.get();
+    this.setState( { posts: res.data });
+    
+    let {posts} = this.state;
+    let selectedPost = posts.find(item => item.id == params.id);
     this.setState( { selectedPost });
+
+    let readMore = [selectedPost];
+    for (var i = 0; i < 4; i++) {
+      readMore.push(posts[i]);
+    }
+    this.setState({ readMore })
   }
 
-  postContent = () => {
+  postContentComp = () => {
     const { selectedPost } = this.state;
 
     return (
@@ -28,11 +38,18 @@ class PostPage extends Component {
     )
   }
 
+  Voltar = () => {
+    return (
+      <Link to ='/' className="Voltar"> Voltar </Link>
+    )
+  }
+
   render() {
     return (
       <div>
         Pagina dos Posts
-        <this.postContent />
+        <this.postContentComp />
+        <this.Voltar />
       </div>
     )
   }
