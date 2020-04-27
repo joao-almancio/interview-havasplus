@@ -2,7 +2,7 @@
   "name": "testejunior",
   "version": "0.1.0",
   "engines": {
-    "node": "12.16.x"
+    "node": "12.16.2"
   },
   "private": false,
   "dependencies": {
