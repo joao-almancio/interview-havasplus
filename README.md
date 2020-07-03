@@ -5,11 +5,9 @@
 Temos uma view para exibir todos os os posts e uma outra view para exibir um posto específico.
 
 ## Rodando o App
-Você precisará criar um servidor estático. A maneira mais simples é usando o pacote serve:
-- npm install -g serve
-- serve -s build
-
-Após estes passos, será criado um servidor onde você poderá acessar o app.
+Instale as dependências e após a instalação inicie com o comando start:
+$ npm install
+$ npm start
 
 ##############################################
 ### Perguntas relacionadas ao app
